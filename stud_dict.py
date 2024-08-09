@@ -25,13 +25,12 @@ while True:
     
     elif choice == 3:
         changed_name = input("Enter student name : ")
-        for x in students:
-            if changed_name in students:
-                new_age = int(input("Enter the new age : "))
-                students.update({changed_name : new_age})
-                print(f"Student age updated succesfully!!\n")   
-            else:
-                print("Student Not Found !!")     
+        if changed_name in students:
+            new_age = int(input("Enter the new age : "))
+            students.update({changed_name : new_age})
+            print(f"Student age updated succesfully!!\n")   
+        else:
+            print("Student Not Found !!")   
         
     
     elif choice == 4:
